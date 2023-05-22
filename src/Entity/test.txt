@@ -1,0 +1,15 @@
+cars==> {
+    Make
+    Model
+    Year
+    Color
+    Seller
+    }
+
+user==> {
+first name
+last name
+email address
+country
+age
+}
