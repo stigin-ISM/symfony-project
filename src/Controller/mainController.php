@@ -13,24 +13,46 @@ class mainController extends AbstractController
 {
 
     // using a constructor to give access to all the functions
-    private $em;
-    public function __construct(EntityManagerInterface $em)
-    {
-        $this->em = $em;
-    }
+//    private $em;
+//    public function __construct(EntityManagerInterface $em)
+//    {
+//        $this->em = $em;
+//    }
 
+    private $carsRepository;
+    public function __construct(CarsRepository $carsRepository){
+        $this->carsRepository = $carsRepository;
+    }
     #[Route("/", name: "home")]
     public function homepage() :Response
     {
         $Title="Munich Car Company";
-        return $this->render('home.html.twig',['Title' => $Title]);
+
+        $cars= $this->carsRepository->findAll();
+
+        return $this->render('general/home.html.twig',['Title' => $Title, 'cars'=>$cars]);
     }
 
     #[Route("/contact", name: "contact")]
     public function contactPage() :Response
     {
         $Title="Contact Page";
-        return $this->render('contact.html.twig',['Title' => $Title]);
+        return $this->render('general/contact.html.twig',['Title' => $Title]);
+    }
+
+
+    #[Route("/signin", name: "signin")]
+    public function signInPage() :Response
+    {
+        $Title="Sign in";
+        return $this->render('users/signin.html.twig',['Title' => $Title]);
+    }
+
+    #[Route("/signup", name: "signup")]
+    public function signUpPage() :Response
+    {
+        $Title="Sign up";
+        return $this->render('users/signup.html.twig',['Title' => $Title]);
     }
 
     #[Route("/test",name: "test")]
