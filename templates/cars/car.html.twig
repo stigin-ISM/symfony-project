@@ -2,5 +2,50 @@
 {% block title %} Contact Us {% endblock %}
 
 {% block body %}
-    <h1>Cars </h1>
+
+
+    <div style = "background: #f4f4f4; padding: 4rem 0rem; min-height: calc(100% - 60px - 300px);" class="out">
+        <div class = "in">
+            <div style = "width: 100%; height: 100%; min-height: 200px; display: flex; align-items: center; justify-content: center;">
+
+                <h1>Cars</h1>
+            </div>
+
+            <div style = "width: 100%; display: grid; grid-template-columns: 1fr 1fr">
+                <a href = "Web-App_Pics/Audi2023.jpeg"><div style = "width: 100%; display: flex; flex-direction: column;"><img style = "width: 100%; height: 100%; object-fit: cover;" src = "{{ asset('images/cars/Audi2023.jpeg') }}"><h2>Audi RS6 2023 Quattro</h2>
+                        <p1>Year: 2023</p1>
+                        <p2>Price: 120000-125000 EUROS</p2>
+                        <p3>Engine: 4 Liter turbo</p3>
+                        <p4>Power: 412 KW</p4>
+                        <p5><button type="button">Add to basket!</button></p5>
+                    </div></a>
+                <a href = "Web-App_Pics/Audi2023Advant.jpeg"><div style = "width: 100%; display: flex; flex-direction: column;"><img style = "width: 100%; height: 100%; object-fit: cover;" src = "{{ asset('images/cars/Audi2023Advant.jpeg') }}"><h2>Audi RS6 2023 Avant Quattro</h2>
+                        <p1>Year: 2023</p1>
+                        <p2>Price: 128000-132000 EUROS</p2>
+                        <p3>Engine: 4 Liter turbo</p3>
+                        <p4>Power: 442 KW</p4>
+                        <p5><button type="button">Add to basket!</button></p5>
+                    </div></a>
+            </div>
+            <div style = "width: 100%; display: grid; grid-template-columns: 1fr 1fr">
+                <a href = "Web-App_Pics/Kia2019.jpeg"><div style = "width: 100%; display: flex; flex-direction: column;"><img style = "width: 100%; height: 100%; object-fit: cover;" src = "{{ asset('images/cars/Kia2019.jpeg') }}"><h2>Kia Piccanto 2019</h2>
+                        <p1>Year: 2019</p1>
+                        <p2>Price: 9350-9500 EUROS</p2>
+                        <p3>Engine: 1.2 Liter</p3>
+                        <p4>Power: 62 KW</p4>
+                        <p5><button type="button">Add to basket!</button></p5>
+                    </div></a>
+                <a href = "Web-App_Pics/Suzuki2016.jpeg"><div style = "width: 100%; display: flex; flex-direction: column;"><img style = "width: 100%; height: 100%; object-fit: cover;" src = "{{ asset('images/cars/Suzuki2016.jpeg') }}"><h2>Suzuki Swift</h2>
+                        <p1>Year: 2016</p1>
+                        <p2>Price: 7900-8000 EUROS</p2>
+                        <p3>Engine: 1.2 Liter</p3>
+                        <p4>Power: 63 KW</p4>
+                        <p5><button type="button">Add to basket!</button></p5>
+                    </div></a>
+            </div>
+        </div></div>
+
+
+
+
 {% endblock %}
