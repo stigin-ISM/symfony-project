@@ -2,5 +2,24 @@
 {% block title %} Contact Us {% endblock %}
 
 {% block body %}
-    <h1>Contact the Admin for more information </h1>
+    <div style = "background: #f4f4f4; padding: 4rem 0rem; min-height: calc(100% - 60px - 300px);" class="out">
+        <div class = "in">
+            <div style = "width: 100%; height: 100%; min-height: 500px; display: flex; flex-direction: column; align-items: center; justify-content: center;"><h1>CONTACTS:</h1><h1>Phone: +49(176) 4512 356</h1><h1>Mail: Cars@mail.com</h1><h1>We are open from 08:30-19:00 daily</h1></div>
+            <a href = "{{ url('error') }}"><div style = "width: 100%; display: flex; flex-direction: column;"><h1>Our building</h1><img style = "width: 100%; height: 100%; object-fit: cover;" src = "{{ asset('images/contact/webuycarsbuild.jpg') }}">
+                    <a href = "{{ url('error') }}"><div style = "width: 100%; display: flex; flex-direction: column;"><h1>The Location on Maps</h1><img style = "width: 100%; height: 100%; object-fit: cover;" src = "{{ asset('images/contact/webuycarslocation.png') }}">
+                        </div>
+
+                        webuycarslocation.png
+                        <footer class="footer">
+                            <div class = "out">
+                                <div class = "in">
+
+
+                                    <div class="legal">
+                                        <p>&copy; Cars.com company. All rights reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+
 {% endblock %}

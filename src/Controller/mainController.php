@@ -26,7 +26,7 @@ class mainController extends AbstractController
     #[Route("/", name: "home")]
     public function homepage() :Response
     {
-        $Title="Munich Car Company";
+        $Title="Cars.com";
 
         $cars= $this->carsRepository->findAll();
 
@@ -40,6 +40,12 @@ class mainController extends AbstractController
         return $this->render('general/contact.html.twig',['Title' => $Title]);
     }
 
+    #[Route("/cars", name: "cars")]
+    public function carsPage() :Response
+    {
+        $Title="Cars Page";
+        return $this->render('cars/car.html.twig',['Title' => $Title]);
+    }
 
     #[Route("/signin", name: "signin")]
     public function signInPage() :Response
@@ -72,6 +78,13 @@ class mainController extends AbstractController
         dd($cars);
         //Delete till here after testing
         return $this->render('test.html.twig',['Title'=>$Title]);
+    }
+
+    #[Route("/error", name: "error")]
+    public function errorPage() :Response
+    {
+        $Title="Error 404";
+        return $this->render('general/error.html.twig',['Title' => $Title]);
     }
 
 }

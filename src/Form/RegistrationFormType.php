@@ -26,6 +26,7 @@ class RegistrationFormType extends AbstractType
                     'class' => 'bg-transparent block mt-10 mx-auto border-b-2 w-1/5 h-20 text-2xl outline-none',
                     'placeholder' => 'Email'
                 ],
+
             ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
