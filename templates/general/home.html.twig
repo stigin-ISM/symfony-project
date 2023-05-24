@@ -1,10 +1,7 @@
-{% extends('base.html.twig') %}
+{% extends"./base.html.twig" %}
 {% block title %} Munich Car Company - Home {% endblock %}
 
 {% block body %}
-
-{#    <h1 class="bg-blue-500 text-2xl text-center font-bold">Welcome To Munich Car Company </h1>#}
-{#    <img src="{{ asset('build/images/bmw.a2469695.jpg') }}" alt="">#}
 
     {# Looping through the array - from database #}
     {% for car in cars %}
